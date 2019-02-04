@@ -1,0 +1,14 @@
+.postBox {
+  border: 1px solid black;
+  margin: 15px;
+}
+
+.titleBox {
+  background-color: red;
+  font-size: 20px;
+}
+
+#topSection {
+  display: flex;
+  flex-flow: row;
+}
