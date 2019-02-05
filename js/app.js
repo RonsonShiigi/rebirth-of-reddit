@@ -34,15 +34,6 @@ function makePost(obj) {
 
     //creating author and date section of post
 
-    let utc = data.created_utc;
-    let date = new Date(utc * 1000);
-    let dateString = date.toLocaleString();
-
-    let authorBox = document.createElement("div");
-    authorBox.className = "authorBox";
-    authorBox.innerHTML = "Posted by " + data.author + " on " + dateString;
-    postBox.appendChild(authorBox);
-
     let imageBox = document.createElement("div");
     imageBox.className = "imageBox";
     postBox.appendChild(imageBox);
@@ -51,6 +42,15 @@ function makePost(obj) {
     postImage.className = "postImage";
     postImage.src = data.thumbnail;
     imageBox.appendChild(postImage);
+
+    let utc = data.created_utc;
+    let date = new Date(utc * 1000);
+    let dateString = date.toLocaleString();
+
+    let authorBox = document.createElement("div");
+    authorBox.className = "authorBox";
+    authorBox.innerHTML = "Posted by " + data.author + " on " + dateString;
+    postBox.appendChild(authorBox);
   }
 
   //checking for embedded media
