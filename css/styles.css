@@ -25,6 +25,10 @@ input {
   display: flex;
 }
 
+#topButtons {
+  padding: 5px;
+}
+
 .userButton {
   font-size: 20px;
   border-radius: 10px;

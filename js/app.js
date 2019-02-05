@@ -15,6 +15,7 @@ const request = (url, callback) => {
 };
 
 const mainDisplay = document.getElementById("mainDisplay");
+const postBody = document.getElementById("postBody");
 
 //appending and creating posts
 function makePost(obj) {
@@ -22,7 +23,7 @@ function makePost(obj) {
   console.log(data);
   let postBox = document.createElement("div");
   postBox.className = "postBox";
-  mainDisplay.appendChild(postBox);
+  postBody.appendChild(postBox);
 
   let titleBox = document.createElement("div");
   titleBox.className = "titleBox";
