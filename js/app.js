@@ -20,11 +20,12 @@ const postBody = document.getElementById("postBody");
 //appending and creating posts
 function makePost(obj) {
   let data = obj.data;
-  console.log(data);
+  //   console.log(data);
   if (data.thumbnail !== "self") {
-    console.log("mediaHere");
+    // console.log("mediaHere");
     let postBox = document.createElement("div");
     postBox.className = "postBox";
+    postBox.id = "postBox";
     postBody.appendChild(postBox);
 
     let titleBox = document.createElement("div");
@@ -58,6 +59,34 @@ request("http://www.reddit.com/r/mma.json", function(data) {
   let posts = data.data.children;
   posts.forEach(makePost);
 });
+
+//adding click functions for sidebar buttons
+//ufc reddit request
+
+// const ufcRequest = (url, callback) => {
+//   while (postBody.firstChild) {
+//     postBody.removeChild(postBody.firstChild);
+//   }
+//   const oReq = new XMLHttpRequest();
+//   oReq.addEventListener("load", function(data) {
+//     const resData = JSON.parse(data.target.responseText);
+//     callback(resData);
+//   });
+//   oReq.open("GET", url);
+//   oReq.send();
+// };
+
+// const ufc = document.getElementById("ufc");
+// ufc.addEventListener(
+//   "click",
+//   ufcRequest("http://www.reddit.com/r/Boxing.json", makePost)
+// );
+
+// function ufcRequest(url, callback) {
+//     while (postBody.firstChild) {
+//         postBody.removeChild(postBody.firstChild);
+//     }
+// }
 
 //checking for embedded media
 //   if (data.media_embed.content) {

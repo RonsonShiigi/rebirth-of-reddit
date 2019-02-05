@@ -42,6 +42,9 @@ input {
   font-family: "Bitter", serif;
   border-radius: 10px;
 }
+body {
+  background-color: rgb(116, 116, 116);
+}
 /* side bar action  */
 #sideBar {
   border: 2px solid black;
@@ -63,6 +66,7 @@ input {
 /* Middle Section Action */
 
 #mainDisplay {
+  margin-top: 20px;
   display: flex;
   flex-flow: row;
   background-color: rgb(213, 218, 221);
@@ -106,3 +110,8 @@ input {
 }
 
 /* adds section  */
+
+.adds {
+  max-width: 285px;
+  margin-top: 10px;
+}
