@@ -52,40 +52,40 @@ function makePost(obj) {
     authorBox.innerHTML = "Posted by " + data.author + " on " + dateString;
     postBox.appendChild(authorBox);
   }
-
-  //checking for embedded media
-  //   if (data.media_embed.content) {
-  //     console.log("mediaHere");
-  //     let mediaBox = document.createElement("div");
-  //     mediaBox.className = "mediaBox";
-  //     postBox.appendChild(mediaBox);
-  //     if (data.domain === "streamable.com") {
-  //       console.log("BaNg");
-  //       let media = document.createElement("iframe");
-  //       media.className = "media";
-  //       media.height = 369;
-  //       media.width = 600;
-  //       media.scrolling = "no";
-  //       media.frameborder = "0";
-  //       media.src = data.url;
-  //       mediaBox.appendChild(media);
-  //     }
-  //   }
-
-  //checking for image or thumbnail
-  //   if (data.thumbnail !== "self") {
-  //     let thumbnailBox = document.createElement("div");
-  //     thumbnailBox.className = "thumbnailBox";
-  //     postBox.appendChild(thumbnailBox);
-
-  //     let thumb = document.createElement("img");
-  //     thumb.className = "thumb";
-  //     thumb.src = data.thumbnail;
-  //     thumbnailBox.appendChild(thumb);
-  //   }
 }
 
 request("http://www.reddit.com/r/mma.json", function(data) {
   let posts = data.data.children;
   posts.forEach(makePost);
 });
+
+//checking for embedded media
+//   if (data.media_embed.content) {
+//     console.log("mediaHere");
+//     let mediaBox = document.createElement("div");
+//     mediaBox.className = "mediaBox";
+//     postBox.appendChild(mediaBox);
+//     if (data.domain === "streamable.com") {
+//       console.log("BaNg");
+//       let media = document.createElement("iframe");
+//       media.className = "media";
+//       media.height = 369;
+//       media.width = 600;
+//       media.scrolling = "no";
+//       media.frameborder = "0";
+//       media.src = data.url;
+//       mediaBox.appendChild(media);
+//     }
+//   }
+
+//checking for image or thumbnail
+//   if (data.thumbnail !== "self") {
+//     let thumbnailBox = document.createElement("div");
+//     thumbnailBox.className = "thumbnailBox";
+//     postBox.appendChild(thumbnailBox);
+
+//     let thumb = document.createElement("img");
+//     thumb.className = "thumb";
+//     thumb.src = data.thumbnail;
+//     thumbnailBox.appendChild(thumb);
+//   }
