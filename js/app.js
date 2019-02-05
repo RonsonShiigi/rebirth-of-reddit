@@ -39,10 +39,20 @@ function makePost(obj) {
     imageBox.className = "imageBox";
     postBox.appendChild(imageBox);
 
+    let blueFighter = document.createElement("img");
+    blueFighter.className = "fighter";
+    blueFighter.src = "blueFighter.png";
+    imageBox.appendChild(blueFighter);
+
     let postImage = document.createElement("img");
     postImage.className = "postImage";
     postImage.src = data.thumbnail;
     imageBox.appendChild(postImage);
+
+    let redFighter = document.createElement("img");
+    redFighter.className = "fighter";
+    redFighter.src = "redFighter.png";
+    imageBox.appendChild(redFighter);
 
     let utc = data.created_utc;
     let date = new Date(utc * 1000);

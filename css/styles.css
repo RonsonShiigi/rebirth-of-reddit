@@ -24,7 +24,8 @@ input {
   border-radius: 8px;
   text-align: right;
   display: flex;
-  font-family: "Bitter", serif;
+  font-family: "Raleway", sans-serif;
+  /* font-family: "Bitter", serif; */
   /* font-family: "Sarabun", sans-serif; */
   background-image: linear-gradient(
     to bottom right,
@@ -53,6 +54,8 @@ body {
   height: 300px;
   width: 500px;
   margin-top: 20px;
+  display: flex;
+  flex-flow: column;
 }
 
 .menuItem {
@@ -62,6 +65,11 @@ body {
 .menuItem:hover {
   background-color: black;
   color: rgb(240, 237, 95);
+}
+
+#createPost {
+  font-size: 20px;
+  border-radius: 5px;
 }
 /* Middle Section Action */
 
@@ -83,6 +91,10 @@ body {
 }
 /* posts section stuff */
 
+.fighter {
+  height: 130px;
+  align-self: center;
+}
 .postBox {
   border: 1px solid black;
   margin: 15px;
@@ -96,6 +108,10 @@ body {
   font-weight: bold;
 }
 
+.imageBox {
+  display: flex;
+  justify-content: space-around;
+}
 .postImage {
   height: 200px;
   width: 200px;
@@ -108,6 +124,10 @@ body {
 .authorBox {
   font-family: "Sarabun", sans-serif;
 }
+
+/* .authorBox {
+  text-align: right;
+} */
 
 /* adds section  */
 
