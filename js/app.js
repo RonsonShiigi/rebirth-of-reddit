@@ -12,7 +12,6 @@ const request = (url, callback) => {
   });
   oReq.open("GET", url);
   oReq.send();
-  return false;
 };
 
 const mainDisplay = document.getElementById("mainDisplay");
@@ -74,24 +73,25 @@ request("http://www.reddit.com/r/mma.json", function(data) {
 //adding click functions for sidebar buttons
 //ufc reddit request
 
-const ufcRequest = (url, callback) => {
-  while (postBody.firstChild) {
-    postBody.removeChild(postBody.firstChild);
-  }
-  const ufcReq = new XMLHttpRequest();
-  ufcReq.addEventListener("load", function(data) {
-    const ufcData = JSON.parse(data.target.responseText);
-    callback(ufcData);
-  });
-  ufcReq.open("GET", url);
-  ufcReq.send();
-};
+// const ufcRequest = (url, callback) => {
 
-const ufc = document.getElementById("ufc");
-ufc.addEventListener(
-  "click",
-  ufcRequest("http://www.reddit.com/r/ufc.json", makePost)
-);
+//   while (postBody.firstChild) {
+//     postBody.removeChild(postBody.firstChild);
+//   }
+//   const ufcReq = new XMLHttpRequest();
+//   ufcReq.addEventListener("load", function(data) {
+//     const ufcData = JSON.parse(data.target.responseText);
+//     callback(ufcData);
+//   });
+//   ufcReq.open("GET", url);
+//   ufcReq.send();
+// };
+
+// const ufc = document.getElementById("ufc");
+// ufc.addEventListener(
+//   "click",
+//   ufcRequest("http://www.reddit.com/r/ufc.json", makePost)
+// );
 
 // function ufcRequest(url, callback) {
 //   while (postBody.firstChild) {

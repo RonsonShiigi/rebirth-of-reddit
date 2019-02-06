@@ -53,6 +53,16 @@ input {
   border-radius: 10px;
 }
 
+#signUp {
+  color: white;
+  background-color: rgb(71, 71, 250);
+}
+
+#logIn {
+  color: rgb(71, 71, 250);
+  background-color: white;
+}
+
 /* side bar action  */
 #sideBar {
   border: 2px solid black;
@@ -60,6 +70,7 @@ input {
   font-size: 35px;
   height: 300px;
   width: 500px;
+  max-width: 500px;
   margin-top: 20px;
   margin-left: 5px;
   display: flex;
@@ -89,18 +100,9 @@ input {
   margin-top: 20px;
   display: flex;
   flex-flow: row;
-  background-color: rgb(213, 218, 221);
+  background-color: rgb(192, 193, 194);
 }
 
-#signUp {
-  color: white;
-  background-color: rgb(71, 71, 250);
-}
-
-#logIn {
-  color: rgb(71, 71, 250);
-  background-color: white;
-}
 /* posts section stuff */
 
 .fighter {
@@ -110,14 +112,15 @@ input {
 .postBox {
   border: 1px solid black;
   margin: 15px;
-  background-color: rgb(241, 243, 244);
+  background-color: rgb(211, 212, 212);
 }
 
 .titleBox {
-  background-color: rgb(196, 195, 195);
+  background-color: rgb(153, 152, 152);
   font-size: 20px;
 
   font-weight: bold;
+  border-bottom: 1px solid black;
 }
 
 .imageBox {
@@ -137,12 +140,13 @@ input {
   font-family: "Sarabun", sans-serif;
 }
 
-/* .authorBox {
-  text-align: right;
-} */
-
 /* adds section  */
 
+#addBody {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 .adds {
   max-width: 285px;
   margin-top: 10px;
