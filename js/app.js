@@ -20,9 +20,9 @@ const postBody = document.getElementById("postBody");
 //appending and creating posts
 function makePost(obj) {
   let data = obj.data;
-  //   console.log(data);
+  console.log(data);
   if (data.thumbnail !== "self") {
-    // console.log("mediaHere");
+    console.log("mediaHere");
     let postBox = document.createElement("div");
     postBox.className = "postBox";
     postBox.id = "postBox";
@@ -114,6 +114,21 @@ function loadBellator() {
 
 const bellator = document.getElementById("bellator");
 bellator.addEventListener("click", loadBellator);
+
+//load boxing Page
+
+function loadBoxing() {
+  while (postBody.firstChild) {
+    postBody.removeChild(postBody.firstChild);
+  }
+  request("http://www.reddit.com/r/BellatorMMA.json", function(data) {
+    let posts = data.data.children;
+    posts.forEach(makePost);
+  });
+}
+
+const boxing = document.getElementById("boxing");
+boxing.addEventListener("click", loadBoxing);
 // const ufcRequest = (url, callback) => {
 
 //   while (postBody.firstChild) {
