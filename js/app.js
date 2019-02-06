@@ -81,6 +81,20 @@ function loadUfc() {
 let ufc = document.getElementById("ufc");
 ufc.addEventListener("click", loadUfc);
 
+//reload Home page from mma reddit
+function loadHome() {
+  while (postBody.firstChild) {
+    postBody.removeChild(postBody.firstChild);
+  }
+  request("http://www.reddit.com/r/mma.json", function(data) {
+    let posts = data.data.children;
+    posts.forEach(makePost);
+  });
+}
+
+const home = document.getElementById("home");
+home.addEventListener("click", loadHome);
+
 request("http://www.reddit.com/r/mma.json", function(data) {
   let posts = data.data.children;
   posts.forEach(makePost);
