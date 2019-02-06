@@ -100,6 +100,20 @@ request("http://www.reddit.com/r/mma.json", function(data) {
   posts.forEach(makePost);
 });
 
+//loadBellator Page
+
+function loadBellator() {
+  while (postBody.firstChild) {
+    postBody.removeChild(postBody.firstChild);
+  }
+  request("http://www.reddit.com/r/BellatorMMA.json", function(data) {
+    let posts = data.data.children;
+    posts.forEach(makePost);
+  });
+}
+
+const bellator = document.getElementById("bellator");
+bellator.addEventListener("click", loadBellator);
 // const ufcRequest = (url, callback) => {
 
 //   while (postBody.firstChild) {
