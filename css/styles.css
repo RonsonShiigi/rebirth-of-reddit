@@ -1,3 +1,11 @@
+/* background image */
+
+body {
+  /* background-color: rgb(116, 116, 116); */
+  background-image: url("https://www.artsfon.com/large/201702/95927.jpg");
+  background-attachment: fixed;
+}
+
 /* top section stuff */
 
 #topSection {
@@ -19,6 +27,7 @@
 }
 
 input {
+  display: flex;
   font-size: 30px;
   color: black;
   border-radius: 8px;
@@ -43,9 +52,7 @@ input {
   font-family: "Bitter", serif;
   border-radius: 10px;
 }
-body {
-  background-color: rgb(116, 116, 116);
-}
+
 /* side bar action  */
 #sideBar {
   border: 2px solid black;
@@ -54,8 +61,10 @@ body {
   height: 300px;
   width: 500px;
   margin-top: 20px;
+  margin-left: 5px;
   display: flex;
   flex-flow: column;
+  box-shadow: 5px 5px gray;
 }
 
 .menuItem {
@@ -70,6 +79,9 @@ body {
 #createPost {
   font-size: 20px;
   border-radius: 5px;
+  width: 150px;
+  margin-left: 5px;
+  font-family: "Libre Baskerville", serif;
 }
 /* Middle Section Action */
 
