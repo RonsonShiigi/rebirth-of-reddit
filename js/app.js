@@ -65,13 +65,26 @@ function makePost(obj) {
   }
 }
 
+//adding click functions for sidebar buttons
+//ufc reddit request
+
+function loadUfc() {
+  while (postBody.firstChild) {
+    postBody.removeChild(postBody.firstChild);
+  }
+  request("http://www.reddit.com/r/ufc.json", function(data) {
+    let posts = data.data.children;
+    posts.forEach(makePost);
+  });
+}
+
+let ufc = document.getElementById("ufc");
+ufc.addEventListener("click", loadUfc);
+
 request("http://www.reddit.com/r/mma.json", function(data) {
   let posts = data.data.children;
   posts.forEach(makePost);
 });
-
-//adding click functions for sidebar buttons
-//ufc reddit request
 
 // const ufcRequest = (url, callback) => {
 
