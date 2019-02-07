@@ -143,6 +143,27 @@ h1 {
   border-radius: 5px;
 }
 /* Middle Section Action */
+/* BATTLE BOX ACTION */
+#battleBox {
+  display: flex;
+  flex-flow: row;
+  font-family: "Russo One", sans-serif;
+  justify-content: space-around;
+  font-size: 25px;
+}
+
+#blueCorner {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.cartoon {
+  height: 130px;
+  width: 130px;
+}
+
+/* post box display action  */
 
 #mainDisplay {
   margin-top: 20px;
