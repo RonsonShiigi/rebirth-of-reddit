@@ -3,6 +3,50 @@ const topSection = document.getElementById("topSection");
 topSection.style.backgroundImage =
   "url('https://us.123rf.com/450wm/in8finity/in8finity1407/in8finity140700139/30184193-stock-vector-steel-wire-mesh-seamless-background-illustration.jpg?ver=6')";
 
+//setting up p4p rankings
+let ranksArr = [
+  "Daniel Cormier",
+  "Jon Jones",
+  "Khabib Nurmagomedov",
+  "Max Holloway",
+  "Henry Cejudo",
+  "Tyron Woodley",
+  "Amanda Nunes",
+  "George St-Pierre",
+  "Conor McGregor",
+  "Tony Ferguson"
+];
+const flagsUrl = [
+  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/220px-Flag_of_the_United_States.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/220px-Flag_of_the_United_States.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_Dagestan.svg/255px-Flag_of_Dagestan.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Hawaii.svg/255px-Flag_of_Hawaii.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/220px-Flag_of_the_United_States.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/220px-Flag_of_the_United_States.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/243px-Flag_of_Brazil.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/255px-Flag_of_Canada.svg.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/255px-Flag_of_Ireland.svg.png",
+  "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/220px-Flag_of_the_United_States.svg.png"
+];
+let rankings = document.getElementById("rankings");
+
+let rankBox = document.getElementsByClassName("rankBox");
+for (var i = 0; i < rankBox.length; i++) {
+  let hold = document.createElement("div");
+  hold.className = "hold";
+  rankBox[i].appendChild(hold);
+
+  let flags = document.createElement("img");
+  flags.className = "flags";
+  flags.src = flagsUrl[i];
+  hold.appendChild(flags);
+
+  let topFighters = document.createElement("div");
+  topFighters.className = "topFighters";
+  topFighters.innerHTML = ranksArr[i];
+  hold.appendChild(topFighters);
+}
+
 //data request template
 const request = (url, callback) => {
   const oReq = new XMLHttpRequest();
@@ -20,9 +64,9 @@ const postBody = document.getElementById("postBody");
 //appending and creating posts
 function makePost(obj) {
   let data = obj.data;
-  console.log(data);
+  // console.log(data);
   if (data.thumbnail !== "self") {
-    console.log("mediaHere");
+    // console.log("mediaHere");
     let postBox = document.createElement("div");
     postBox.className = "postBox";
     postBox.id = "postBox";

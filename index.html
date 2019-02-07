@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto+Slab"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Russo+One"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="topSection">
@@ -33,13 +37,33 @@
       </div>
     </div>
     <div id="mainDisplay">
-      <div id="sideBar">
-        <div class="menuItem" id="home">Home</div>
-        <div class="menuItem" id="ufc">UFC</div>
-        <div class="menuItem" id="bellator">Bellator</div>
-        <div class="menuItem" id="boxing">Boxing</div>
-        <div class="menuItem">Subscribe</div>
-        <button id="createPost" class="menuItem">Create Post</button>
+      <div id="firstSection">
+        <div id="sideBar">
+          <div class="menuItem" id="home">Home</div>
+          <div class="menuItem" id="ufc">UFC</div>
+          <div class="menuItem" id="bellator">Bellator</div>
+          <div class="menuItem" id="boxing">Boxing</div>
+          <div class="menuItem">Subscribe</div>
+          <button id="createPost" class="menuItem">Create Post</button>
+        </div>
+        <div id="p4p">
+          <h1>P4P Rankings</h1>
+          <ol id="rankings">
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+            <li class="rankBox"></li>
+          </ol>
+          <div id="voteDiv">
+            <button id="vote">Vote</button>
+          </div>
+        </div>
       </div>
 
       <div class="mainDisplayChildren" id="postBody"></div>
