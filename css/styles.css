@@ -158,6 +158,12 @@ h1 {
   display: flex;
 }
 
+.thumb {
+  height: 25px;
+  widows: 25px;
+  margin-left: 8px;
+}
+
 /* post box display action  */
 
 #mainDisplay {
@@ -242,4 +248,9 @@ h1 {
 
 #silva {
   text-shadow: 0 0 3px #ff0000;
+}
+
+.counterBox {
+  display: flex;
+  flex-flow: row;
 }

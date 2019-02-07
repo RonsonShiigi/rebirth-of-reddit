@@ -47,6 +47,24 @@ for (var i = 0; i < rankBox.length; i++) {
   hold.appendChild(topFighters);
 }
 
+//setting up thumb counters
+
+function blueCount() {
+  let bcount = document.getElementById("bcount");
+  bcount.innerHTML++;
+}
+
+function redCount() {
+  let rcount = document.getElementById("rcount");
+  rcount.innerHTML++;
+}
+
+let blueThumb = document.getElementById("blueThumb");
+blueThumb.addEventListener("click", blueCount);
+
+let redThumb = document.getElementById("redThumb");
+redThumb.addEventListener("click", redCount);
+
 //data request template
 const request = (url, callback) => {
   const oReq = new XMLHttpRequest();
